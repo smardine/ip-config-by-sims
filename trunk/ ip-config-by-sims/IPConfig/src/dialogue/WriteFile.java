@@ -34,8 +34,7 @@ public class WriteFile {
 	 * @param ligneAEcrire -String ce qu'il faut ecrire
 	 * @param CheminDuFichier -String le chemin du fichier
 	 */
-	public static void WriteLine(String ligneAEcrire, String CheminDuFichier)
-			 {
+	public static void WriteLine(String ligneAEcrire, String CheminDuFichier) {
 		FileWriter writer = null;
 		String texte = (ligneAEcrire + "\n");
 
@@ -55,29 +54,28 @@ public class WriteFile {
 			}
 		}
 	}
-	
+
 	/**
 	 * Ecrire une ligne dans un fichier
 	 * @param ligneAEcrire -String ce qu'il faut ecrire
 	 * @param CheminDuFichier -String le chemin du fichier
 	 */
-	public static void WriteList(ArrayList<String> ListeEcrire, String CheminDuFichier)
-			 {
+	public static void WriteList(ArrayList<String> ListeEcrire,
+			String CheminDuFichier) {
 		FileWriter writer = null;
 		try {
 			writer = new FileWriter(CheminDuFichier, false);
 		} catch (IOException e1) {
 			System.out.println("IO Exception");
 		}
-		
-		
-		for (String ligne :ListeEcrire){
+
+		for (String ligne : ListeEcrire) {
 			String texte = (ligne + "\n");
 			try {
-			writer.write(texte, 0, texte.length());
+				writer.write(texte, 0, texte.length());
 			} catch (IOException ex) {
 				System.out.println("IO exception");
-			} 
+			}
 		}
 		if (writer != null) {
 			try {
@@ -87,8 +85,6 @@ public class WriteFile {
 			}
 		}
 	}
-		
-	
 
 	public static void WriteLineVector(Vector<String> ligneAEcrire,
 			String CheminDuFichier) throws IOException {
