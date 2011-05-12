@@ -1,6 +1,5 @@
 package dialogue;
 
-
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.FileInputStream;
@@ -14,44 +13,44 @@ public class ReadFile {
 
 	private static final long serialVersionUID = 1L;
 
-//	/**
-//	 * Lecture ligne à ligne d'un fichier texte et affichage dans une jList
-//	 * @param chemin -String le chemin du fichier texte
-//	 * @param listModel -DefaultModelList le model de liste
-//	 * @param nbLigne -JLabel sert a afficher le nb de ligne
-//	 * @param nbAdresse -int le nb d'adresse trouvée.
-//	 */
-//
-//	public static int ReadLine(String chemin, DefaultListModel listModel) {
-//
-//		int nbAdresse = 0;
-//		try {
-//			// Open the file that is the first
-//			// command line parameter
-//			FileInputStream fstream = new FileInputStream(chemin);
-//			// Get the object of DataInputStream
-//			DataInputStream in = new DataInputStream(fstream);
-//			BufferedReader br = new BufferedReader(new InputStreamReader(in));
-//			String strLine;
-//			// Read File Line By Line
-//			while ((strLine = br.readLine()) != null) {
-//
-//				// Print the content on the console
-//				// System.out.println (strLine);
-//
-//				if (!strLine.equals("")) {
-//					listModel.addElement(strLine);
-//					nbAdresse++;
-//				}
-//			}
-//			// Close the input stream
-//			in.close();
-//
-//		} catch (Exception e) {// Catch exception if any
-//			System.err.println("Error: " + e.getMessage());
-//		}
-//		return nbAdresse;
-//	}
+	// /**
+	// * Lecture ligne à ligne d'un fichier texte et affichage dans une jList
+	// * @param chemin -String le chemin du fichier texte
+	// * @param listModel -DefaultModelList le model de liste
+	// * @param nbLigne -JLabel sert a afficher le nb de ligne
+	// * @param nbAdresse -int le nb d'adresse trouvée.
+	// */
+	//
+	// public static int ReadLine(String chemin, DefaultListModel listModel) {
+	//
+	// int nbAdresse = 0;
+	// try {
+	// // Open the file that is the first
+	// // command line parameter
+	// FileInputStream fstream = new FileInputStream(chemin);
+	// // Get the object of DataInputStream
+	// DataInputStream in = new DataInputStream(fstream);
+	// BufferedReader br = new BufferedReader(new InputStreamReader(in));
+	// String strLine;
+	// // Read File Line By Line
+	// while ((strLine = br.readLine()) != null) {
+	//
+	// // Print the content on the console
+	// // System.out.println (strLine);
+	//
+	// if (!strLine.equals("")) {
+	// listModel.addElement(strLine);
+	// nbAdresse++;
+	// }
+	// }
+	// // Close the input stream
+	// in.close();
+	//
+	// } catch (Exception e) {// Catch exception if any
+	// System.err.println("Error: " + e.getMessage());
+	// }
+	// return nbAdresse;
+	// }
 
 	/**
 	 * Trouver une chaine de caracteres dans un fichier
@@ -106,7 +105,7 @@ public class ReadFile {
 
 				if (!strLine.equals("")) {
 					lst.add(strLine);
-					
+
 				}
 			}
 			// Close the input stream
@@ -116,6 +115,6 @@ public class ReadFile {
 			System.err.println("Error: " + e.getMessage());
 		}
 		return lst;
-		
+
 	}
 }
